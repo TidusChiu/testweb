@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html onselectstart="return false;">
+	<head>
+		<title>HTML5 Game - Crazy Robot!!!!!!</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="WindowTuning.js"></script>
+		<script type="text/javascript" src="PauseBlock.js"></script>
+		<script type="text/javascript" src="GameControl.js"></script>
+		<script type="text/javascript" src="GameOthers.js"></script>
+		<script type="text/javascript" src="Tank.js"></script>
+		<script type="text/javascript" src="Robot.js"></script>
+		<script type="text/javascript" src="Weapon.js"></script>
+		<script type="text/javascript" src="indexJS.js"></script>
+		
+	</head>
+	<body>
+		<div id="divTestWindow" style="position:fixed; right:10px; top:0px; background-color: #ff0000; opacity:0.7;">
+			<p style="font-size:xx-large; font-weight:900;">
+				Crazy Robot v1.08
+			</p>
+			<p>Chrome please^_^</p>
+			<p>Use weapon is Q-W-E-<span onclick="">R</span></p>
+		</div>
+		<div id="divMainWindow" style="position:fixed; left:70px; top:0px; width:600px; height:600px; border:1px solid black; overflow: hidden;">
+			<div id="divGameHeader" style="position:relative; width:100%; height:50px; background-color:#99ffff">
+			</div>
+			<div id="divGameWindow" style="position:relative; width:100%; height:500px; overflow: hidden; background-image: url('images/earth.png'); background-size: 50px 50px;" onmousemove="wt.refreshPos()" onclick="tank.moveEffect()">
+				
+			</div>
+			<div id="divGameFooter" style="position:relative; width:100%; height:50px; background-color: #99ffff;">
+				<canvas id="cvsWeaponInfo"></canvas>
+			</div>
+			<div id="divGamePause" style="position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:black; opacity: 1;">
+				
+			</div>
+		</div>
+	</body>
+</html>
