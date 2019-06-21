@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html onselectstart="return false;">
+	<head>
+		<title>HTML5 Game - Crazy Robot!!!!!!</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="script/WindowTuning.js"></script>
+		<script type="text/javascript" src="script/PauseBlock.js"></script>
+		<script type="text/javascript" src="script/GameControl.js"></script>
+		<script type="text/javascript" src="script/GameOthers.js"></script>
+		<script type="text/javascript" src="script/Connection.js"></script>
+		<script type="text/javascript" src="script/Tank.js"></script>
+		<script type="text/javascript" src="script/Enemy.js"></script>
+		<script type="text/javascript" src="script/Weapon.js"></script>
+		<script type="text/javascript" src="script/indexJS.js"></script>
+		
+	</head>
+	<body>
+		<div id="divTestWindow" style="position:fixed; right:10px; top:0px; background-color: #ff0000; opacity:0.7;">
+			<p style="font-size:xx-large; font-weight:900;">
+				Crazy Robot Online BETA v1.0002
+			</p>
+			<p>
+				connect to:<input id="serverUrl" type="text" value="114.27.164.44"/>
+			</p>
+			<p>請使用Chrome瀏覽器 please^_^</p>
+			<p>使用滑鼠左鍵移動</p>
+			<p>鍵盤 Q-W-E-R 可以施放技能</p>
+			<p>盡可能的排除對手</p>
+			<div style="visibility: hidden;">
+				<audio id="audioGameBGM" controls>
+					<source src="bgm/bgm_normal.mp3"/>
+				</audio>
+				<audio id="audioMissile">
+					<source src="se/effect_missile.ogg"/>
+				</audio>
+				<audio id="audioBoostOn">
+					<source src="se/effect_boost_on.ogg"/>
+				</audio>
+				<audio id="audioBoostOff">
+					<source src="se/effect_boost_off.ogg"/>
+				</audio>
+				<audio id="audioHealing">
+					<source src="se/effect_healing.ogg"/>
+				</audio>
+				<audio id="audioBeHit">
+					<source src="se/effect_behit.ogg"/>
+				</audio>
+				<audio id="audioCrash">
+					<source src="se/effect_crash.ogg"/>
+				</audio>
+			</div>
+		</div>
+		<div id="divMainWindow" style="position:fixed; left:70px; top:0px; width:600px; height:600px; border:1px solid black; overflow: hidden;">
+			<div id="divGameHeader" style="position:relative; width:100%; height:50px; background-color:#99ffff">
+			</div>
+			<div id="divGameWindow" style="position:relative; width:100%; height:500px; overflow: hidden; background-image: url('images/earth.png'); background-size: 50px 50px;" onmousemove="wt.refreshPos()" onclick="tank.moveEffect()">
+				
+			</div>
+			<div id="divGameFooter" style="position:relative; width:100%; height:50px; background-color: #99ffff;">
+				<canvas id="cvsWeaponInfo"></canvas>
+			</div>
+			<div id="divGamePause" style="position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:black; opacity: 1;">
+				<p id="pPlayerInfo" style="position:absolute; ">
+					<span style="color:red;">玩家:</span><input id="inputPlayerName" type="text" value="Player"/>
+				</p>
+			</div>
+		</div>
+		
+	</body>
+</html>
