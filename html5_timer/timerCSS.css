@@ -1,0 +1,13 @@
+#div_counter{
+    border: 1px solid #cccccc;
+    width: 300px;
+    height: 50px;
+    font-size: larger;
+    text-align: center;
+}
+
+.img_clock{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
